@@ -1,0 +1,8 @@
+flask==2.3.3
+transformers==4.37.2
+groq==0.4.1
+requests==2.31.0
+torch==2.6.0
+gunicorn==21.2.0
+sentencepiece
+python-dotenv
