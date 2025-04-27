@@ -84,6 +84,4 @@ gunicorn app:app
 
 If you encounter issues with the Groq client initialization, the application will attempt different initialization methods automatically. Make sure your API keys are correctly set in the `.env` file.
 
-## License
-
-[Your chosen license]
+By Lakshya Tripathi
