@@ -73,12 +73,7 @@ reflective-journal-app/
 
 3. Start journaling and receive personalized AI responses!
 
-## Deployment
 
-For production deployment, consider using gunicorn:
-```
-gunicorn app:app
-```
 
 ## How It Works
 
