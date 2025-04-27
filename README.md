@@ -6,7 +6,7 @@ A Flask-based journaling application that uses sentiment analysis and AI to prov
 
 - Web interface for submitting journal entries
 - Sentiment analysis of your journal entries using Hugging Face's multilingual sentiment analysis model
-- AI-generated personalized responses from Lotus, your empathetic journal companion
+- AI-generated personalized responses , your empathetic journal companion
 - Detailed emotional analysis and personalized activity suggestions
 - Responsive design with visual sentiment indicators
 
