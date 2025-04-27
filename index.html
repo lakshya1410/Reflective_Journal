@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflective Journal</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-indigo-700">Reflective Journal</h1>
+            <p class="text-gray-600 mt-2">Write, reflect, and receive insights to improve your mood</p>
+        </header>
+        
+        <main class="max-w-2xl mx-auto">
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h2 class="text-xl font-semibold mb-4">Today's Journal Entry</h2>
+                <form id="journalForm">
+                    <div class="mb-4">
+                        <textarea 
+                            id="journalEntry" 
+                            class="w-full border border-gray-300 rounded-md p-3 h-40 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                            placeholder="How are you feeling today? What's on your mind?"
+                            required
+                        ></textarea>
+                    </div>
+                    <div class="text-right">
+                        <button 
+                            type="submit" 
+                            class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        >
+                            Submit Entry
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div id="responseContainer" class="bg-white rounded-lg shadow-md p-6 mb-8 hidden">
+                <div class="flex items-center mb-6">
+                    <div id="sentimentIndicator" class="w-12 h-12 rounded-full mr-4 flex items-center justify-center text-white font-bold"></div>
+                    <div>
+                        <h2 class="text-xl font-semibold">Your Mood Analysis</h2>
+                        <p id="sentimentScore" class="text-gray-600"></p>
+                    </div>
+                </div>
+                
+                <div id="responseContent" class="prose max-w-none">
+                    <!-- AI response will be inserted here -->
+                </div>
+            </div>
+            
+            <div id="loadingSpinner" class="text-center py-8 hidden">
+                <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-indigo-500 border-t-transparent"></div>
+                <p class="mt-2 text-gray-600">Analyzing your entry...</p>
+            </div>
+            
+            <div id="errorMessage" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative hidden" role="alert">
+                <span id="errorText">An error occurred.</span>
+            </div>
+        </main>
+        
+        <footer class="text-center mt-12 text-gray-500 text-sm">
+            <p>Journal Web App &copy; 2025 - Your personal reflective space</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

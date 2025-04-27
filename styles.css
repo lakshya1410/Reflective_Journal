@@ -1,0 +1,56 @@
+/* Custom styles to complement Tailwind CSS */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.prose p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Fade-in animation for response */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#responseContainer {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Sentiment indicator styles */
+.sentiment-positive {
+    background-color: #10B981; /* Green for positive */
+}
+
+.sentiment-neutral {
+    background-color: #9CA3AF; /* Gray for neutral */
+}
+
+.sentiment-negative {
+    background-color: #EF4444; /* Red for negative */
+}
+
+/* Hover effects */
+button:hover {
+    transition: all 0.2s ease;
+}
+
+textarea:focus {
+    transition: all 0.2s ease;
+}
+
+/* Journal entry styling */
+#journalEntry {
+    resize: vertical;
+}
+
+/* Loading spinner additional styling */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
