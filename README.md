@@ -8,6 +8,7 @@ A Flask-based journaling application that uses sentiment analysis and AI to prov
 - Sentiment analysis of your journal entries using Hugging Face's multilingual sentiment analysis model
 - AI-generated personalized responses from Lotus, your empathetic journal companion
 - Detailed emotional analysis and personalized activity suggestions
+- Responsive design with visual sentiment indicators
 
 ## Prerequisites
 
@@ -41,6 +42,23 @@ A Flask-based journaling application that uses sentiment analysis and AI to prov
    GROQ_API_KEY=your_groq_api_key_here
    ```
 
+## Project Structure
+
+```
+reflective-journal-app/
+│
+├── app.py                  # Main Flask application
+├── requirements.txt        # Python dependencies
+├── .env                    # API keys (you need to create this file)
+│
+├── static/                 # Static assets
+│   ├── styles.css          # Custom CSS styles
+│   └── script.js           # Frontend JavaScript
+│
+└── templates/              # HTML templates
+    └── index.html          # Main application interface
+```
+
 ## Running the Application
 
 1. Start the Flask application:
@@ -72,13 +90,15 @@ gunicorn app:app
    - Empathetic acknowledgment
    - Personalized activity suggestions
    - Warm encouragement
+5. The response is displayed with a visual sentiment indicator
 
-## File Structure
+## Frontend Features
 
-- `app.py` - Main Flask application
-- `templates/index.html` - Frontend web interface
-- `requirements.txt` - Python dependencies
-- `.env` - API keys (you need to create this file)
+- Clean, responsive UI built with Tailwind CSS
+- Visual sentiment indicators (emoji and color-coded)
+- Smooth animations and transitions
+- Error handling and loading indicators
+- Mobile-friendly design
 
 ## Troubleshooting
 
